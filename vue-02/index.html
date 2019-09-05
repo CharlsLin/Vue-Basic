@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+            <meta content="width=device-width, initial-scale=1.0" name="viewport">
+                <meta content="ie=edge" http-equiv="X-UA-Compatible">
+                    <title>
+                        Vue.js
+                    </title>
+                    <link href="style.css" rel="stylesheet">
+                        <script src="https://cdn.jsdelivr.net/npm/vue">
+                        </script>
+                    </link>
+                </meta>
+            </meta>
+        </meta>
+    </head>
+    <body>
+        <!-- vue-app是根容器 -->
+        <div id="vue-app">
+            <h1>
+                键盘 events
+            </h1>
+            <label>
+                name :
+            </label>
+            <!-- <input type="text" v-on:keyup.enter="logName"> -->
+            <!-- enter：按下enter后才触发 -->
+            <label>
+                age :
+            </label>
+            <!--  <input type="text" v-on:keyup.alt.enter="logAge" > -->
+            <!-- alt.enter：同时按下alt和enter后才触发 -->
+            <h1>
+                双向数据绑定 /input/ select / textarea
+            </h1>
+            <label>
+                name :
+            </label>
+            <!--  <input ref="name" type="text" v-on:keyup="logName"> -->
+            <input ref="name" type="text" v-model="name">
+                <span>
+                    {{name}}
+                </span>
+                <label>
+                    age :
+                </label>
+                <!--  <input ref="age" type="text" v-on:keyup="logAge"> -->
+                <input ref="age" type="text" v-model="age">
+                    <span>
+                        {{age}}
+                    </span>
+                </input>
+            </input>
+        </div>
+        <script src="app.js">
+        </script>
+    </body>
+</html>
