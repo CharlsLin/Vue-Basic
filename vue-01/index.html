@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+            <meta content="width=device-width, initial-scale=1.0" name="viewport">
+                <meta content="ie=edge" http-equiv="X-UA-Compatible">
+                    <title>
+                        Vue.js
+                    </title>
+                    <link href="style.css" rel="stylesheet">
+                        <script src="https://cdn.jsdelivr.net/npm/vue">
+                        </script>
+                    </link>
+                </meta>
+            </meta>
+        </meta>
+    </head>
+    <body>
+        <!-- vue-app是根容器 -->
+        <div id="vue-app">
+            <h1>
+                {{greet('afternoon')}}
+            </h1>
+            <h1>
+                name:{{ name }}
+            </h1>
+            <p>
+                job: {{job}}
+            </p>
+            <a v-bind:href="website">
+                去baidu
+            </a>
+            <input v-bind:value="name"/>
+            <p v-html="websiteTag">
+            </p>
+            <button v-on:click.once="add(1)">
+                涨一岁
+            </button>
+            <button v-on:click="min(1)">
+                减一岁
+            </button>
+            <button v-on:click="add(10)">
+                涨十岁
+            </button>
+            <button v-on:click="min(10)">
+                减十岁
+            </button>
+            <p>
+                My age is {{age}}
+            </p>
+            <div id="canvas" @mousemove="updateXY" >
+                {{x}},{{y}} - 
+              <!--   <span v-on:mousemove="stopMoving"> Stop moving
+                </span> -->
+                <span v-on:mousemove.stop=""> Stop moving
+                </span>
+            </div>
+            <a v-on:click.prevent="alert()" href="http://www.baidu.com">点我</a>
+        </div>
+        <script src="app.js">
+        </script>
+    </body>
+</html>
