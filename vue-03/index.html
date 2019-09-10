@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+            <meta content="width=device-width, initial-scale=1.0" name="viewport">
+                <meta content="ie=edge" http-equiv="X-UA-Compatible">
+                    <title>
+                        Vue.js
+                    </title>
+                    <link href="style.css" rel="stylesheet">
+                        <script src="https://cdn.jsdelivr.net/npm/vue">
+                        </script>
+                    </link>
+                </meta>
+            </meta>
+        </meta>
+    </head>
+    <body>
+        <!-- vue-app是根容器 -->
+        <div id="vue-app">
+            <h1>
+                计算属性 Computed
+            </h1>
+            <button @click = "a++">Add to A</button>
+            <button @click = "b++">Add to B</button>
+            <p>A- {{a}}</p>
+            <p>B- {{b}}</p>
+            <p> Default Age - {{age}}</p>
+            <!-- 计算属性，addToA不需要加括号 -->
+            <p> Age + A = {{addToA}}</p>
+            <p> Age + B = {{addToB}}</p>
+            <!--方法，addToA需要加括号  -->
+            <!-- <p> Age + A = {{addToA()}}</p> -->
+            
+        </div>
+        <script src="app.js">
+        </script>
+    </body>
+</html>
