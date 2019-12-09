@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<head>
+	<title>
+		vue惹
+	</title>
+</head>
+<body>
+
+<!-- 声明式渲染 -->
+<div id="app-1">{{ message }}</div>
+<br>
+
+
+<!-- v-bind:将这个元素节点的 title 特性和 Vue 实例的 message 属性保持一致 -->
+<div id="app-2" >
+ 	<span v-bind:title="message">
+	请把鼠标放上来好🐎</div>
+	</span>
+
+<!-- 条件 -->
+<div id="app-3">
+  <p v-if="seen">能看到👴🐎？</p>
+</div>
+<br>
+
+<!-- 循环 -->
+<div id="app-4">
+  <ol>
+    <li v-for="todo in todos">
+      {{ todo.text }}
+    </li>
+  </ol>
+</div>
+<br>
+
+<!-- 循环 -->
+<div id="app-5">
+  <ol>
+    <span v-for="todo in todos">
+     <p>{{ todo.hi }}</p>
+		<p>{{ todo.do }}</p>
+      		<p>{{ todo.money }}</p>
+    </span>
+  </ol>
+</div>
+<br>
+
+<!-- 处理用户输入： 逆转 -->
+<div id="app-6">
+  <p>{{ message }}</p>
+  <button v-on:click="reverseMessage">点击就看狗粮翻车</button>
+</div>
+<br>
+
+<div id="app-7">
+  <p>{{ message }}</p>
+  <input v-model="message">
+</div>
+<script src="./vue1.js"></script>
+</body>
+</html>
